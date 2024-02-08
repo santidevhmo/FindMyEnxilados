@@ -2,4 +2,4 @@
 
 A React JS Website to find the nearest store selling products from the local business "Enxilados"
 
-![Alt text]([https://example.com/path/to/image.png](https://i.ibb.co/s5Z2nsk/Screenshot-2024-02-08-at-11-12-45-a-m.png)https://i.ibb.co/s5Z2nsk/Screenshot-2024-02-08-at-11-12-45-a-m.png)
+![]([https://example.com/path/to/image.png](https://i.ibb.co/s5Z2nsk/Screenshot-2024-02-08-at-11-12-45-a-m.png)https://i.ibb.co/s5Z2nsk/Screenshot-2024-02-08-at-11-12-45-a-m.png)
