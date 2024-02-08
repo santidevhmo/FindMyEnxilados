@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import NearestEnxilados from "./NearestStore";
+import StartPage from "./StartPage/StartPage.jsx";
+import BgRadar from "./StartPage/BgRadar.jsx";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BgRadar />
+      {/* <StartPage /> */}
+      {/* <h1>FindMyEnxilados</h1> */}
+      {/* <NearestEnxilados /> */}
     </div>
   );
 }
