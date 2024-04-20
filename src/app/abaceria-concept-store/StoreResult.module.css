@@ -1,0 +1,341 @@
+.mainDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultContainer {
+    width: 80vw;
+    /* overflow: hidden; */
+}
+
+.resultContainer .col .col-9 {
+    padding: 0px;
+}
+
+/* ----- Loading Screen ----- */
+
+.loadingPageBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.loadingPageBody h2 {
+    color: white;
+    font-family: "CircularMedium";
+    font-size: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+/* ----- Result Screen ----- */
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 160px;
+}
+
+/* -- Top Row -- */
+.returnBtn {
+    height: 45px;
+    width: 45px;
+    border: 2.2px solid black;
+    border-radius: 20%;
+    background-color: white;
+}
+
+.returnBtn img {
+    width: 45%;
+    padding-bottom: 4px;
+}
+
+.returnBtn:hover {
+    background-color: #dbd8d8;
+}
+
+/* -- Result Title */
+
+.title {
+    font-family: "CircularMedium";
+    font-size: 1.1em;
+    line-height: 25px;
+    padding-top: 10px
+}
+
+.resultTitle {
+    font-family: "Medium";
+    color: black;
+    font-size: 10vw;
+    line-height: 75%;
+    width: 80vw;
+}
+
+/* -- Result Img -- */
+.imgContainer {
+    width: 60vw;
+    height: 50vh;
+    border-radius: 35px;
+    object-fit: cover;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* -- Result Information : distance, external links, etc  */
+
+/* Distance Box : How many KM from current position */
+.distanceBox {
+    min-height: 100%;
+    background-color: black;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.distanceBox p {
+    font-family: "CircularMedium";
+    font-size: 1.1vw;
+    text-align: center;
+    color: white;
+    /* Add a padding of 10 to the left, right and top in a single line */
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 0;
+}
+
+.distanceNumbers {
+    font-family: "Medium";
+    font-size: 10vw;
+    color: white;
+    display: flex;
+    align-items: baseline;
+}
+
+.distanceNumbers h1 {
+    font-size: inherit;
+    margin-bottom: 0px;
+}
+
+.distanceNumbers h3 {
+    padding-left: 5px;
+    margin-bottom: 0px;
+}
+
+/* Address Box */
+.addressBox {
+    min-height: 100%;
+    background-color: #D71313;
+    border-radius: 25px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.addressBox p, .addressBox h3 {
+    color: white;
+    padding-left: 20px;
+}
+
+.addressBox p {
+    font-size: 1.2vw;
+    font-family: "CircularMedium";
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+
+.addressBox h3 {
+    font-family: "Medium";
+    font-size: 6.5vw;
+    text-align: left;
+    text-justify: none;
+    line-height: 80%;
+    /* Add a padding of 10 to the left and right in a single line */
+    padding: 0px 20px 0px 20px;
+}
+
+/* Horarios Box */
+
+.horariosBox {
+    display: flex;
+    min-height: 100%;
+    align-items: start;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 25px;
+}
+
+/* Create a rule for the class .horariosBox for all child elements after the first */
+.horariosBox > *:not(:first-child) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.horariosContent {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.horariosRow {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.horariosBox p {
+    font-family: "CircularMedium";
+    font-size: 1.2vw;
+    color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+
+.horariosBox h3 {
+    font-family: "Condensed";
+    font-size: 6vw;
+    color: white;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.horariosBox h4 {
+    font-family: "Bold";
+    font-size: 6vw;
+    color: white;
+    margin-bottom: 0px;
+}
+
+.horariosRow:nth-child(3) {
+    padding-bottom: 10px;
+}
+
+/* External Link's : Maps  */
+.externalLinks {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .externalLinks span {
+    height: 5vh;
+  }
+
+.externalLinks > * {
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* External Link's : Bottom row  */
+.externalLinksTwo {
+    display: flex;
+    flex-direction: row;
+    min-height: 100px;
+}
+
+.externalLinksTwo separator {
+    width: 10px;
+}
+
+/* Add a media query for 1400px width */
+@media (max-width: 1400px) {
+
+    .resultTitle {
+        font-size: 14vw;
+    }
+
+}
+
+
+/* Add a media query for 1100px width */
+@media (max-width: 1100px) {
+
+    .resultContainer {
+        width: 90vw;
+    }
+
+    .imgContainer {
+        width: 90vw;
+    }
+
+    .horariosContent {
+        padding-top: 20px;
+    }
+
+}
+
+/* Add a media query for 730px width */
+@media (max-width: 730px) {
+
+    .distanceBox p {
+        font-size: 1.8vw;
+    }
+
+    .addressBox p {
+        font-size: 1.8vw;
+    }
+
+    .horariosBox p {
+        font-size: 1.8vw;
+    }
+
+    .externalLinksTwo separator {
+        width: 5px;
+    }
+
+    .externalLinks span {
+        height: 1vh;
+    }
+
+    
+
+}
+
+/* Add a media query for 254 screen width */
+@media (max-width: 576px) {
+
+    .resultTitle {
+        font-size: 20vw;
+    }
+
+    .imgContainer {
+        height: 35vh;
+    }
+
+    .addressBox h3 {
+        font-size: 8vw;
+    }
+
+    .distanceNumbers h1 {
+        font-size: 16vw;
+    }
+
+    .horariosBox {
+        padding-bottom: 20px;
+    }
+
+    .horariosBox h3, .horariosBox h4 {
+        font-size: 9vw;
+    }
+
+    .horariosContent {
+        padding-top: 10px;
+        padding-bottom: 10px
+    }
+
+    .externalLinks {
+        padding-top: 10px;
+    }
+
+
+}

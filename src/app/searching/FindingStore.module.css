@@ -1,0 +1,26 @@
+
+/* ----- Loading Screen ----- */
+
+.loadingPageBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.loadingPageBody h2 {
+    color: white;
+    font-family: "CircularMedium";
+    font-size: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 160px;
+}

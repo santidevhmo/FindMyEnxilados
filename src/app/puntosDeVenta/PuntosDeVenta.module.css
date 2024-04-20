@@ -1,0 +1,72 @@
+
+.mainContainer {
+    margin-top: 20px;
+    width: 80vw;
+}
+
+.mainTitle {
+    font-family: "Bold";
+    color: black;
+    font-size: 6rem;
+    line-height: 75%;
+    width: 40vw;
+    text-align: start;
+    margin-top: 40px;
+}
+
+.mainContainer p {
+    font-family: "CircularMedium";
+    font-size: 1.2rem;
+    text-align: start;
+}
+
+.externalLink {
+    filter: brightness(0%);
+    width: 1.5vw;
+}
+
+/* Add a media rule for 1355 px */
+@media (max-width: 1355px) {
+
+    .externalLink {
+        width: 2vw;
+    }
+
+}
+
+@media (max-width: 829px) {
+
+    .externalLink {
+        width: 3vw;
+    }
+
+}
+
+/* Individual Punto de Venta */
+.puntoDeVentaContainer {
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 20px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    height: 100%;
+    margin-bottom: 15px;
+}
+
+.puntoDeVentaContainer:hover {
+    background-color: black;
+    border: 3px solid white;
+    color: white;
+}
+
+.puntoDeVentaContainer:hover .externalLink {
+    filter: brightness(100%);
+}
+
+.mainContainer h2 {
+    font-family: "Medium";
+    font-size: 5rem;
+    margin-top: 8px;
+    margin-bottom: 0;
+}

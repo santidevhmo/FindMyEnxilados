@@ -1,0 +1,159 @@
+
+.externalLinkBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #D71313;
+    border: 0px;
+    border-radius: 20px;
+    text-align: left;
+    padding: 20px 20px 20px 20px;/* Top, right, bottom, left  */
+}
+
+/* The space between the text and the icon */
+.externalLinkBtn span {
+    width: 30px;
+}
+
+/* Centering the text inside the button */
+.externalLinkBtn p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Icon Img */
+.externalLinkBtn img {
+    width: 1.3rem;
+}
+
+
+/* -- Return Button -- */
+.returnBtn {
+    height: 45px;
+    width: 45px;
+    border: 2.2px solid black;
+    border-radius: 20%;
+    background-color: white;
+    margin-right: 50px; /* Add this line to create space between the button and text */
+}
+
+.returnBtn img {
+    width: 45%;
+    padding-bottom: 4px;
+}
+
+.returnBtn:hover {
+    background-color: #dbd8d8;
+}
+
+
+/* Ver nuestro Instagram Btn */
+#instagram {
+    font-family: "CircularMedium";
+    font-size: 1.3rem;
+    color: white;
+    background-color: #D62976;
+}
+
+#instagram:hover {
+    background-color: #d86a9c;
+}
+
+/* Ver Pagina Web Btn */
+#website {
+    font-family: "CircularMedium";
+    font-size: 1.3rem;
+    color: white;
+    background-color: #73777B;
+}
+
+#website:hover {
+    background-color: #9da5ad;
+}
+
+/* Ver Pagina Web Btn */
+#phone {
+    font-family: "CircularMedium";
+    font-size: 1.3rem;
+    color: white;
+    background-color: #34A853;
+}
+
+#phone:hover {
+    background-color: #82d097;
+}
+
+/* Ver Pagina Web Btn */
+#location {
+    font-family: "CircularMedium";
+    font-size: 1.3rem;
+    color: white;
+    background-color: #1A73E8;
+}
+
+#location:hover {
+    background-color: #5d94dc;
+    font-size: 1.3rem;
+    color: white;
+    background-color: #1A73E8;
+}
+
+#maps {
+    display: flex;
+    height: 100%;
+    font-family: "CircularMedium";
+    font-size: 1.3rem;
+    color: white;
+    background-color: #1A73E8;
+}
+
+#maps:hover {
+    background-color: #5d94dc;
+}
+
+/* Abrir otros puntos de venta path */
+#puntosDeVenta {
+    font-family: "CircularMedium";
+    background-color: white;
+    font-size: 1.3rem;
+    border: 2px solid;
+    text-decoration: none;
+}
+
+#puntosDeVenta p { 
+    padding: 10px;
+}
+
+#puntosDeVenta:active {
+    text-decoration: none;
+}
+
+#puntosDeVenta:hover {
+    background-color: #dbd8d8;
+}
+
+/* Horizontally invert the img property inside #puntosDeVenta */
+#puntosDeVenta img {
+    transform: scaleX(-1);
+}
+
+/* Add a media query for width 730 px */
+@media (max-width: 730px) {
+
+    .externalLinkBtn {
+        font-size: .5rem;
+        height: 10vh;
+    }
+
+    #instagram,
+    #maps,
+    #location,
+    #phone,
+    #website,
+    #puntosDeVenta {
+        font-size: 1rem;
+    }
+
+}

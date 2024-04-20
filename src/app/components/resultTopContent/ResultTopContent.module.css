@@ -1,0 +1,53 @@
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+/* -- Return Button -- */
+.returnBtn {
+    height: 45px;
+    width: 45px;
+    border: 2.2px solid black;
+    border-radius: 20%;
+    background-color: white;
+    margin-right: 50px; /* Add this line to create space between the button and text */
+}
+
+.returnBtn img {
+    width: 45%;
+    padding-bottom: 4px;
+}
+
+.returnBtn:hover {
+    background-color: #dbd8d8;
+}
+
+/* -- Result Title -- */
+
+.title {
+    font-family: "CircularMedium";
+    font-size: 1.1em;
+    line-height: 25px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.resultTitle {
+    font-family: "Medium";
+    color: black;
+    font-size: 10vw;
+    line-height: 75%;
+}
+
+/* -- Result Img -- */
+.imageContainer {
+    width: 80vw;
+    height: 25vw;
+    border-radius: 35px;
+    object-fit: cover;
+    padding-bottom: 10px;
+}
+
