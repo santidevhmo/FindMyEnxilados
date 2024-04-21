@@ -18,3 +18,4 @@ A creative marketing website for "Enxilados" for users to find the nearest selli
 ## Back-end
 - [x] Implement Next.JS Routing for client-side navigation
 - [ ] Implement MongoDB PUSH requests for User region requests
+      - [] Search scientific articles about open-source  
