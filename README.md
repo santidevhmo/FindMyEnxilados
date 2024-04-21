@@ -7,6 +7,8 @@ A creative marketing website for "Enxilados" for users to find the nearest selli
 ---
 
 # ☑️  To-Do's
+- [ ] Take LinkedIn Learning Course "React: Software Arquitecture"
+
 ## Front-end
 - [x] Design navigation Screen's in Figma
 - [x] Translate Home page to code
