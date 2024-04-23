@@ -14,6 +14,7 @@ A creative marketing website for "Enxilados" for users to find the nearest selli
 - [x] Translate Home page to code
 - [x] Translate About Us page to code
 - [ ] Translate all result pages to code
+- [ ] Add button "Allow location access" inside the loading page for when the location alert is rejected
 
 ## Back-end
 - [x] Implement Next.JS Routing for client-side navigation
