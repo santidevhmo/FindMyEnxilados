@@ -13,7 +13,6 @@ A creative marketing website for "Enxilados" for users to find the nearest selli
 - [x] Design navigation Screen's in Figma
 - [x] Translate Home page to code
 - [x] Translate About Us page to code
-- [ ] La Cubiella SC page : search for photos by Instagram's photos from location "La Cubiella SC"
 - [ ] Translate all result pages to code
 - [ ] Update all ExternalLinkBtn's for every result page
 - [ ] Add button "Allow location access" inside the loading page for when the location alert is rejected
