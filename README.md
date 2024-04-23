@@ -15,6 +15,7 @@ A creative marketing website for "Enxilados" for users to find the nearest selli
 - [x] Translate About Us page to code
 - [ ] Translate all result pages to code
 - [ ] Add button "Allow location access" inside the loading page for when the location alert is rejected
+- [ ] Use AI to re-style the "Solicitar region" btn (Ask for the styling based on the styling of already-made components, pass him the react-google-autocomplete documentation
 
 ## Back-end
 - [x] Implement Next.JS Routing for client-side navigation
