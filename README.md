@@ -26,3 +26,4 @@ A creative marketing website for "Enxilados" for users to find the nearest selli
 - [ ] Create & pass a "Distance" prop for the Distance component
 - [ ] Implement MongoDB PUSH requests for User region requests
 - [ ] Publish Website using Vercel
+- [ ] Understand the use of "use client" on top of JSX files
