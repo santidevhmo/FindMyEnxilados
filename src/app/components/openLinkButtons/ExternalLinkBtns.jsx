@@ -1,3 +1,5 @@
+"use client";
+
 import "./ExternalLinkBtns.css";
 
 const instagramIcon = "/assets/icons/instagramIcon.svg";
@@ -6,114 +8,160 @@ const phoneIcon = "/assets/icons/phoneIcon.svg";
 const externalLinkIcon = "/assets/icons/externalLinkIcon.svg";
 const returnArrow = "/assets/icons/returnArrow.svg";
 import StartPageCSS from "../../StartPage.module.css"
+import Link from "next/link";
+import { useRouter } from 'next/navigation';
 
-function ReturnBtn() {
+function ReturnBtn(previousRoute) {
+
+  const router = useRouter();
 
   return (
-    <button className="returnBtn">
+    <button
+      className="returnBtn"
+      onClick={() => router.push("/")}
+    >
       <img src={returnArrow} alt="" />
     </button>
   );
 }
 
-function InstagramBtn() {
+function InstagramBtn( {url} ) {
+
   return (
-    <button
+
+    <Link
       className="externalLinkBtn"
       id="instagram"
-      onClick={() =>
-        (window.location.href = "https://www.instagram.com/_enxilados/")
-      }
+      href={url}
+      target="_blank"
+      style={{ textDecorationColor: "transparent" }}
     >
       <p>Ver nuestro instagram</p>
       <span></span>
       <img src={instagramIcon} alt="instagramIcon" />
-    </button>
+    </Link>
+
   );
 }
 
-function WebsiteBtn() {
+function WebsiteBtn( {url} ) {
+
   return (
-    <button
+    <Link
+      href={url}
+      target="_blank"
+      style={{ textDecorationColor: "transparent" }}
       className="externalLinkBtn"
       id="website"
-      onClick={() => (window.location.href = "https://enxilados.com.mx/")}
     >
       <p>Ver pagina web</p>
       <span></span>
       <img src={websiteIcon} alt="websiteIcon" />
-    </button>
+    </Link>
+
   );
 }
 
-function PhoneBtn() {
+function PhoneBtn( {phoneNumber} ) {
+
   return (
-    <button
+
+    <Link
+      href={'tel:' + phoneNumber}
+      target="_blank"
+      style={{ textDecorationColor: "transparent" }}
       className="externalLinkBtn"
       id="phone"
-      onClick={() => (window.location.href = "tel:+526623561894")}
     >
       <p>Contáctanos por telefono</p>
       <span></span>
       <img src={phoneIcon} alt="phoneIcon" />
-    </button>
+    </Link>
+
   );
 }
 
 function PhysicalLocationBtn() {
+
   return (
-    <button
+
+    <Link
+      href="https://maps.app.goo.gl/9TS6mDhL5K2ZVSGd7"
+      target="_blank"
+      style={{ textDecorationColor: "transparent" }}
       className="externalLinkBtn"
       id="location"
-      onClick={() =>
-        (window.location.href = "https://maps.app.goo.gl/9TS6mDhL5K2ZVSGd7")
-      }
     >
       <p>Conoce nuestra tienda física</p>
       <span></span>
       <img src={externalLinkIcon} alt="externalLinkIcon" />
-    </button>
+
+    </Link>
+
   );
 }
 
-function OpenGoogleMaps() {
+function OpenGoogleMaps( {url} ) {
+
   return (
-    <button
+
+    <Link
+      href={url}
+      target="_blank"
+      style={{ textDecorationColor: "transparent" }}
       className="externalLinkBtn"
       id="maps"
-      onClick={() =>
-        (window.location.href = "https://maps.app.goo.gl/9TS6mDhL5K2ZVSGd7")
-      }
     >
       <p>Abrir en Google Maps</p>
       <span></span>
       <img src={externalLinkIcon} alt="externalLinkIcon" />
-    </button>
+    </Link>
+
   );
 }
 
-function OpenAppleMaps() {
+function OpenAppleMaps( {url} ) {
+
   return (
-    <button
+    <Link
+      href={url}
+      target="_blank"
+      style={{ textDecorationColor: "transparent" }}
       className="externalLinkBtn"
       id="maps"
-      onClick={() =>
-        (window.location.href =
-          "https://maps.apple.com/?ll=20.607697,-105.234355")
-      }
     >
       <p>Abrir en Apple Maps</p>
       <span></span>
       <img src={externalLinkIcon} alt="externalLinkIcon" />
-    </button>
+    </Link>
   );
 }
 
+function OpenInMaps( {url} ) {
+  return (
+    <Link
+      href={url}
+      target="_blank"
+      style={{ textDecorationColor: "transparent" }}
+      className="externalLinkBtn"
+      id="maps"
+    >
+      <p>Abrir en Maps</p>
+      <span></span>
+      <img src={externalLinkIcon} alt="externalLinkIcon" />
+    </Link>
+  )
+}
+
 function PuntosDeVentaBtn() {
+
+  const router = useRouter();
+
   return (
     <button
       className="externalLinkBtn"
       id="puntosDeVenta"
+      onClick={() => router.push("/puntos-de-venta")}
     >
       <p>Ver otros puntos de venta</p>
       <span></span>
@@ -123,6 +171,7 @@ function PuntosDeVentaBtn() {
 }
 
 function NearestEnxilados() {
+
   return (
     <button
       className={StartPageCSS.encontrarTiendaBtn}
@@ -140,6 +189,7 @@ export {
   PhysicalLocationBtn,
   OpenGoogleMaps,
   OpenAppleMaps,
+  OpenInMaps,
   PuntosDeVentaBtn,
   ReturnBtn,
   NearestEnxilados

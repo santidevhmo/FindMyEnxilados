@@ -22,6 +22,7 @@ export default function AbaceriaConceptStore() {
                     <ResultTopContent
                         resultTitle={"Nuestra Pagina Web"}
                         imageURL={"https://res.cloudinary.com/dsx9xiq32/image/upload/v1713592826/Screenshot_2024-02-06_at_11.01.21_a.m._hxtqx2.png"}
+                        returnPath={"/"}
                     />
                 </Row>
 
@@ -40,9 +41,11 @@ export default function AbaceriaConceptStore() {
                         </div>
                     </Col>
                 </Row>
-                <Row className="mt-2 gx-2">
+                <Row className="mt-5 mb-5 gx-2">
                     {/* Maps : External Link Btn's */}
-                    <Col><h3>Quieres que enxilados venda fisicamente en tu región?</h3></Col>
+                    <Col className="text-center" xl={2}>
+                        <h4>Quieres que enxilados venda fisicamente en tu región?</h4>
+                    </Col>
                     <Col>
                         <div className={PaginaWebCSS.externalLinks}>
                             <SolicitarRegionBtn />
@@ -54,7 +57,7 @@ export default function AbaceriaConceptStore() {
                 <Row className="gx-0 mt-2 mb-5">
                     <div className={PaginaWebCSS.externalLinksTwo}>
                         <Col>
-                        <WebsiteBtn />
+                        <WebsiteBtn url={"https://enxilados.com.mx/"}/>
                         </Col>
                         <separator></separator>
                         <Col>

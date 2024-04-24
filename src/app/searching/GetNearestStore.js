@@ -1,12 +1,13 @@
 
 import ubicaciones from "./ubicaciones";
 
+let shortestDistance = 0;
+
 // ----- Función para obtener la ubicación más cercana -----
 async function nearestStore(userPosition) {
 
   // Initialize variables to keep track of the nearest store and its distance
   let nearestStore = null;
-  let shortestDistance = Number.MAX_VALUE;
 
   try {
 
@@ -67,4 +68,4 @@ function deg2rad(deg) {
   return deg * (Math.PI / 180);
 }
 
-module.exports = nearestStore;
+module.exports = { nearestStore, shortestDistance };

@@ -1,14 +1,15 @@
+"use client";
+
 import React from 'react';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Link } from 'react-router-dom';
 import { ReturnBtn } from '../components/openLinkButtons/ExternalLinkBtns.jsx';
 import PuntosDeVentaCSS from './PuntosDeVenta.module.css';
-import externalLinkIcon from "../../assets/icons/externalLinkIcon.svg";
 import SolicitarRegionBtn from '../components/solicitarRegionBtn/SolicitarRegionBtn.jsx';
+import Link from "next/link";
 
-export default function PuntosDeVenta() {
+export default function PuntosDeVenta(previousRoutePath) {
 
     return (
         <Container className={PuntosDeVentaCSS.mainContainer}>
@@ -16,7 +17,7 @@ export default function PuntosDeVenta() {
             {/* Return Btn Row */}
             <Row>
                 <Col className='d-flex align-items-start'>
-                    <ReturnBtn />
+                    <ReturnBtn previousRoute="/" />
                 </Col>
                 <Col></Col>
             </Row>
@@ -71,19 +72,24 @@ export default function PuntosDeVenta() {
 
 }
 
-function PuntoDeVentaBtn( {openLinkURL, sellingStoreText} ) {
-  return (
-    <button
-      className={PuntosDeVentaCSS.puntoDeVentaContainer}
-      onClick={() => (window.location.href = openLinkURL)}
-    >
-      <h2>{sellingStoreText}</h2>
-      <img
-        src={externalLinkIcon}
-        alt="externalLinkIcon"
-        className={PuntosDeVentaCSS.externalLink}
-      />
-    </button>
-  );
+function PuntoDeVentaBtn({ openLinkURL, sellingStoreText }) {
+
+    const externalLinkIcon = "/assets/icons/externalLinkIcon.svg";
+
+    return (
+        <Link
+            href={openLinkURL}
+            target="_blank"
+            style={{ textDecorationColor: "transparent" }}
+            className={PuntosDeVentaCSS.puntoDeVentaContainer}
+        >
+            <h2>{sellingStoreText}</h2>
+            <img
+                src={externalLinkIcon}
+                alt="externalLinkIcon"
+                className={PuntosDeVentaCSS.externalLink}
+            />
+        </Link>
+    );
 }
 

@@ -5,15 +5,16 @@ import ResultTopContent from "../components/resultTopContent/ResultTopContent.js
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import AbaceriaConceptCSS from "./AbaceriaConcept.module.css";
+import LocalEnxiladosCSS from "./LocalEnxilados.module.css";
 import React from "react";
+import { shortestDistance } from "../searching/GetNearestStore";
 
 import { PhoneBtn, InstagramBtn, WebsiteBtn, PuntosDeVentaBtn, OpenAppleMaps, OpenGoogleMaps } from "../components/openLinkButtons/ExternalLinkBtns.jsx";
 
 export default function AbaceriaResult() {
 
   // Class variable created to have gx-0 + the CSS module class
-  const cssModuleGxClass = `gx-0 ${AbaceriaConceptCSS.resultContainer}`;
+  const cssModuleGxClass = `gx-0 ${LocalEnxiladosCSS.resultContainer}`;
 
   return (
     
@@ -22,9 +23,9 @@ export default function AbaceriaResult() {
         <Row className="justify-content-center">
           {/* ---- Top Row : ReturnBtn and Text ----- */}
           <ResultTopContent
-            resultTitle={"Abaceria Concept Store"}
-            imageURL={"https://res.cloudinary.com/dsx9xiq32/image/upload/v1709572919/FindMyEnxilados/79301479_2584679041638959_1646461054198218752_n_zmekdr.jpg"}
-            returnPath="/"
+            resultTitle={"Local Enxilados"}
+            imageURL={"https://res.cloudinary.com/dsx9xiq32/image/upload/v1713918792/FindMyEnxilados/Screenshot_2024-04-23_at_18-33-00_QUIENES_SOMOS_bbyanj.png"}
+            returnPath={"/"}
           />
         </Row>
 
@@ -33,21 +34,20 @@ export default function AbaceriaResult() {
           {/* gx (Gutter) = "default spacing in Bootstrap Col's & Rows  */}
           {/* -- Distance Box */}
           <Col xs={4} sm={3} md={3} lg={2}>
-            <div className={AbaceriaConceptCSS.distanceBox}>
+            <div className={LocalEnxiladosCSS.distanceBox}>
               <p>Distancia desde tu ubicación actual:</p>
-              <div className={AbaceriaConceptCSS.distanceNumbers}>
-                <h1>164</h1>
+              <div className={LocalEnxiladosCSS.distanceNumbers}>
+                <h1>{shortestDistance ?? 0}</h1>
                 <h3>km</h3>
               </div>
             </div>
           </Col>
           {/* -- Address Box */}
           <Col xs={8} sm={9} md={9} lg={10}>
-            <div className={AbaceriaConceptCSS.addressBox}>
+            <div className={LocalEnxiladosCSS.addressBox}>
               <p>Dirección:</p>
               <h3 className="mt-2">
-                Blvd. Luis D.Colosio, Calz. de los Ángeles y, 83249, Hermosillo,
-                Son.
+              Blvd. Solidaridad 547-A, entre Ébanos y Olmos, Fuentes del Mezquital, 83240 Hermosillo, Son.
               </h3>
             </div>
           </Col>
@@ -55,16 +55,16 @@ export default function AbaceriaResult() {
         <Row className="mt-2 gx-2">
           {/* -- Horarios Box */}
           <Col sm={6} md={6} lg={8}>
-            <div className={AbaceriaConceptCSS.horariosBox}>
+            <div className={LocalEnxiladosCSS.horariosBox}>
               <p>Horarios:</p>
-              <div className={AbaceriaConceptCSS.horariosContent}>
-                <div className={AbaceriaConceptCSS.horariosRow}>
-                  <h3>Lunes a Sabado</h3>
-                  <h4>10:00 am - 7:30 pm</h4>
+              <div className={LocalEnxiladosCSS.horariosContent}>
+                <div className={LocalEnxiladosCSS.horariosRow}>
+                  <h3>Lunes a Viernes</h3>
+                  <h4>12:00 pm - 7:30 pm</h4>
                 </div>
-                <div className={AbaceriaConceptCSS.horariosRow}>
+                <div className={LocalEnxiladosCSS.horariosRow}>
                   <h3>Domingo</h3>
-                  <h4>10:00 am - 7:30 pm</h4>
+                  <h4>cerrado</h4>
                 </div>
               </div>
             </div>
@@ -72,25 +72,25 @@ export default function AbaceriaResult() {
 
           {/* Maps : External Link Btn's */}
           <Col sm={6} md={6} lg={4}>
-            <div className={AbaceriaConceptCSS.externalLinks}>
-              <PhoneBtn url={"6621109968"}/>
+            <div className={LocalEnxiladosCSS.externalLinks}>
+              <PhoneBtn url={"6623561894"}/>
               <span></span>
-              <InstagramBtn url={"https://www.instagram.com/abaceriamx/"}/>
+              <InstagramBtn url={"https://www.instagram.com/_enxilados/"}/>
               <span></span>
-              <WebsiteBtn url={"https://linktr.ee/abaceriamx"}/>
+              <WebsiteBtn url={"https://enxilados.com.mx/"}/>
             </div>
           </Col>
         </Row>
 
         {/* Contact Info : External Link Btn's */}
         <Row className="gx-0 mt-2">
-          <div className={AbaceriaConceptCSS.externalLinksTwo}>
+          <div className={LocalEnxiladosCSS.externalLinksTwo}>
             <Col>
               <OpenGoogleMaps url={"https://maps.app.goo.gl/F2Qvt9A9JmnXU8yW9"}/>
             </Col>
             <separator></separator>
             <Col>
-              <OpenAppleMaps url={"https://maps.apple.com/?address=Paseo%20de%20los%20%C3%81ngeles%20671,%20Terra%20Nueva,%2083249%20Hermosillo,%20Son.,%20Mexico&auid=13693886273689961332&ll=29.085471,-110.996338&lsp=9902&q=Abaceria%20Food%20Concept%20Store"}/>
+              <OpenAppleMaps url={"https://maps.apple.com/?address=Boulevard%20Solidaridad%20547,%20Fuentes%20del%20Mezquital,%2083240%20Hermosillo,%20Son.,%20Mexico&auid=5436164018390643142&ll=29.075098,-110.979549&lsp=9902&q=ENXILADOS"}/>
             </Col>
           </div>
         </Row>

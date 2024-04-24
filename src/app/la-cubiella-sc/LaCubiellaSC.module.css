@@ -1,11 +1,9 @@
-.mainDiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .resultContainer {
+    
     width: 80vw;
+    display: flex;
+    flex-direction: column;
     /* overflow: hidden; */
 }
 
@@ -89,33 +87,42 @@
 
 /* -- Result Information : distance, external links, etc  */
 
-/* descriptionBox */
-.descriptionBox {
+/* Distance Box : How many KM from current position */
+.distanceBox {
     min-height: 100%;
     background-color: black;
     border-radius: 25px;
     display: flex;
-    align-items: start;
+    align-items: center;
     flex-direction: column;
 }
 
-.descriptionBox p {
-    font-family: "CircularLight";
-    font-size: .8em;
-    text-align: start;
+.distanceBox p {
+    font-family: "CircularMedium";
+    font-size: 1.1vw;
+    text-align: center;
     color: white;
     /* Add a padding of 10 to the left, right and top in a single line */
-    padding: 15px 15px 0px 15px;
+    padding: 10px 10px 0px 10px;
     margin-bottom: 0;
 }
 
-.descriptionText h3 {
-    font-family: "CircularMedium";
-    font-size: 1.5em;
+.distanceNumbers {
+    font-family: "Medium";
+    font-size: 10vw;
     color: white;
     display: flex;
-    margin-bottom: 20px;
-    padding: 5px 15px 0px 15px;
+    align-items: baseline;
+}
+
+.distanceNumbers h1 {
+    font-size: inherit;
+    margin-bottom: 0px;
+}
+
+.distanceNumbers h3 {
+    padding-left: 5px;
+    margin-bottom: 0px;
 }
 
 /* Address Box */

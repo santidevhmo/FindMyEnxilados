@@ -1,7 +1,7 @@
 'use client';
 
 import getCurrentLocation from "./GetCurrentLocation";
-import nearestStore from "./GetNearestStore";
+import { nearestStore } from "./GetNearestStore";
 import ubicaciones from "./ubicaciones";
 import StartPageCSS from "../StartPage.module.css";
 import { redirect } from 'next/navigation';

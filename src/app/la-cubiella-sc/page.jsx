@@ -5,15 +5,16 @@ import ResultTopContent from "../components/resultTopContent/ResultTopContent.js
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import AbaceriaConceptCSS from "./AbaceriaConcept.module.css";
+import LaCubiellaCSS from "./LaCubiellaSC.module.css";
 import React from "react";
+import { shortestDistance } from "../searching/GetNearestStore";
 
-import { PhoneBtn, InstagramBtn, WebsiteBtn, PuntosDeVentaBtn, OpenAppleMaps, OpenGoogleMaps } from "../components/openLinkButtons/ExternalLinkBtns.jsx";
+import { PhoneBtn, InstagramBtn, WebsiteBtn, PuntosDeVentaBtn, OpenInMaps } from "../components/openLinkButtons/ExternalLinkBtns.jsx";
 
-export default function AbaceriaResult() {
+export default function LaCubiellaSC() {
 
   // Class variable created to have gx-0 + the CSS module class
-  const cssModuleGxClass = `gx-0 ${AbaceriaConceptCSS.resultContainer}`;
+  const cssModuleGxClass = `gx-0 ${LaCubiellaCSS.resultContainer}`;
 
   return (
     
@@ -22,8 +23,8 @@ export default function AbaceriaResult() {
         <Row className="justify-content-center">
           {/* ---- Top Row : ReturnBtn and Text ----- */}
           <ResultTopContent
-            resultTitle={"Abaceria Concept Store"}
-            imageURL={"https://res.cloudinary.com/dsx9xiq32/image/upload/v1709572919/FindMyEnxilados/79301479_2584679041638959_1646461054198218752_n_zmekdr.jpg"}
+            resultTitle={"La Cubiella SC"}
+            imageURL={"https://res.cloudinary.com/dsx9xiq32/image/upload/v1713913525/FindMyEnxilados/416287768_787360740097716_3662239849348549440_n_cigmud.jpg"}
             returnPath="/"
           />
         </Row>
@@ -33,21 +34,20 @@ export default function AbaceriaResult() {
           {/* gx (Gutter) = "default spacing in Bootstrap Col's & Rows  */}
           {/* -- Distance Box */}
           <Col xs={4} sm={3} md={3} lg={2}>
-            <div className={AbaceriaConceptCSS.distanceBox}>
+            <div className={LaCubiellaCSS.distanceBox}>
               <p>Distancia desde tu ubicación actual:</p>
-              <div className={AbaceriaConceptCSS.distanceNumbers}>
-                <h1>164</h1>
+              <div className={LaCubiellaCSS.distanceNumbers}>
+                <h1>{shortestDistance ?? 0}</h1>
                 <h3>km</h3>
               </div>
             </div>
           </Col>
           {/* -- Address Box */}
           <Col xs={8} sm={9} md={9} lg={10}>
-            <div className={AbaceriaConceptCSS.addressBox}>
+            <div className={LaCubiellaCSS.addressBox}>
               <p>Dirección:</p>
               <h3 className="mt-2">
-                Blvd. Luis D.Colosio, Calz. de los Ángeles y, 83249, Hermosillo,
-                Son.
+                Blvr. Gabriel Estrada Lote 1, 85506 Guaymas, Son.
               </h3>
             </div>
           </Col>
@@ -55,16 +55,16 @@ export default function AbaceriaResult() {
         <Row className="mt-2 gx-2">
           {/* -- Horarios Box */}
           <Col sm={6} md={6} lg={8}>
-            <div className={AbaceriaConceptCSS.horariosBox}>
+            <div className={LaCubiellaCSS.horariosBox}>
               <p>Horarios:</p>
-              <div className={AbaceriaConceptCSS.horariosContent}>
-                <div className={AbaceriaConceptCSS.horariosRow}>
-                  <h3>Lunes a Sabado</h3>
-                  <h4>10:00 am - 7:30 pm</h4>
+              <div className={LaCubiellaCSS.horariosContent}>
+                <div className={LaCubiellaCSS.horariosRow}>
+                  <h3>Domingo a Miercoles</h3>
+                  <h4>10:00 am - 9:00 pm</h4>
                 </div>
-                <div className={AbaceriaConceptCSS.horariosRow}>
-                  <h3>Domingo</h3>
-                  <h4>10:00 am - 7:30 pm</h4>
+                <div className={LaCubiellaCSS.horariosRow}>
+                  <h3>Jueves a Sabado</h3>
+                  <h4>10:00 am - 10:00 pm</h4>
                 </div>
               </div>
             </div>
@@ -72,25 +72,21 @@ export default function AbaceriaResult() {
 
           {/* Maps : External Link Btn's */}
           <Col sm={6} md={6} lg={4}>
-            <div className={AbaceriaConceptCSS.externalLinks}>
-              <PhoneBtn url={"6621109968"}/>
+            <div className={LaCubiellaCSS.externalLinks}>
+              <PhoneBtn phoneNumber="6622146700" />
               <span></span>
-              <InstagramBtn url={"https://www.instagram.com/abaceriamx/"}/>
+              <InstagramBtn url={"https://www.instagram.com/lacubiellamx/"}/>
               <span></span>
-              <WebsiteBtn url={"https://linktr.ee/abaceriamx"}/>
+              <WebsiteBtn url={"https://lacubiella.com/"}/>
             </div>
           </Col>
         </Row>
 
         {/* Contact Info : External Link Btn's */}
         <Row className="gx-0 mt-2">
-          <div className={AbaceriaConceptCSS.externalLinksTwo}>
+          <div className={LaCubiellaCSS.externalLinksTwo}>
             <Col>
-              <OpenGoogleMaps url={"https://maps.app.goo.gl/F2Qvt9A9JmnXU8yW9"}/>
-            </Col>
-            <separator></separator>
-            <Col>
-              <OpenAppleMaps url={"https://maps.apple.com/?address=Paseo%20de%20los%20%C3%81ngeles%20671,%20Terra%20Nueva,%2083249%20Hermosillo,%20Son.,%20Mexico&auid=13693886273689961332&ll=29.085471,-110.996338&lsp=9902&q=Abaceria%20Food%20Concept%20Store"}/>
+              <OpenInMaps url={"https://maps.app.goo.gl/NTViu44SvpNrNRzQA"}/>
             </Col>
           </div>
         </Row>

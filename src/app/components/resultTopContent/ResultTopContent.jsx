@@ -3,14 +3,14 @@ import Col from "react-bootstrap/Col";
 import { ReturnBtn } from "../openLinkButtons/ExternalLinkBtns.jsx"
 import ResultTopContentCSS from "./ResultTopContent.module.css";
 
-export default function ResultTopContent( {resultTitle, imageURL} ) {
+export default function ResultTopContent( {resultTitle, imageURL, returnPath} ) {
   return (
     <div className={ResultTopContentCSS.contentContainer}>
       <div className={ResultTopContentCSS.topContent}>
         {/* ---- Top Row : ReturnBtn and Text ----- */}
         <Row className="mt-5 align-items-center">
           <Col>
-            <ReturnBtn />
+            <ReturnBtn previousRoute={returnPath} />
           </Col>
           <Col xs={6}>
             <p className={ResultTopContentCSS.title}>

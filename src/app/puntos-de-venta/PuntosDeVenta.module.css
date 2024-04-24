@@ -45,6 +45,7 @@
 /* Individual Punto de Venta */
 .puntoDeVentaContainer {
     background-color: white;
+    color: black;
     border: 3px solid black;
     border-radius: 20px;
     display: flex;

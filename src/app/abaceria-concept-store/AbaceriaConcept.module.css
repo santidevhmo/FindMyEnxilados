@@ -1,11 +1,9 @@
-.mainDiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .resultContainer {
+    
     width: 80vw;
+    display: flex;
+    flex-direction: column;
     /* overflow: hidden; */
 }
 
