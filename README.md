@@ -20,7 +20,7 @@ A creative marketing website for "Enxilados" for users to find the nearest selli
 
 ## Back-end
 - [x] Implement Next.JS Routing for client-side navigation
-- [ ] Create & pass a "Distance" prop for the Distance component
+- [x] Create & pass a "Distance" prop for the Distance component
 - [ ] Implement MongoDB PUSH requests for User region requests
 - [ ] Publish Website using Vercel
 
