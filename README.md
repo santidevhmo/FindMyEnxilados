@@ -28,3 +28,4 @@ A creative marketing website for "Enxilados" for users to find the nearest selli
 - [ ] Watch YT video "Next js Tutorial for Beginners | Nextjs 13 (App Router) with TypeScript" & make a code guide that's like a Next JS arquitecture and "guidelines" documentation (how it works, data flow, styling, etc)
 - [ ] Create a code guide about importing icons inside the /public/icons (Not necessary to use "././", etc)
 - [ ] Understand the use of "use client" on top of JSX files
+- [ ] Watch YT Code Academy video  "Full HTTP Networking Course – Fetch and REST APIs in JavaScript" : Fully comprehend Networking concepts & Difference between libraries such as AXIOS, Express, etc
