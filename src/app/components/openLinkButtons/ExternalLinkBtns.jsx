@@ -181,6 +181,19 @@ function NearestEnxilados() {
   );
 }
 
+function AllowLocation( { onAllowLocationClick } ) {
+
+  return (
+    <button
+      className={StartPageCSS.encontrarTiendaBtn}
+      onClick={onAllowLocationClick}
+    >
+        Volver al inicio
+    </button>
+  );
+}
+
+
 
 export {
   InstagramBtn,
@@ -192,5 +205,6 @@ export {
   OpenInMaps,
   PuntosDeVentaBtn,
   ReturnBtn,
-  NearestEnxilados
+  NearestEnxilados,
+  AllowLocation
 };

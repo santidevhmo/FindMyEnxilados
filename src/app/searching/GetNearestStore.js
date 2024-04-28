@@ -7,26 +7,38 @@ let shortestDistance = 0;
 async function nearestStore(userPosition) {
 
   // Initialize variables to keep track of the nearest store and its distance
-  let nearestStore = null;
+  let nearestStore;
 
   try {
 
     // 2 - Calculate the distance between the user's location and each store's coordinates
     ubicaciones.forEach((ubicacion) => {
+
       const storeLatitude = ubicacion.coordinates[0];
       const storeLongitude = ubicacion.coordinates[1];
 
       // 2.1 - Calculate distance using Haversine formula
-      const distance = calculateDistance(
-        userPosition.latitude,
-        userPosition.longitude,
-        storeLatitude,
-        storeLongitude,
-      );
+      const distance =(() => {
+        if (userPosition.latitude === 0 && userPosition.longitude === 0) { 
+          return 0;
+        } else {
+          return calculateDistance(
+            userPosition.latitude,
+            userPosition.longitude,
+            storeLatitude,
+            storeLongitude,
+          );
+        }
+      })();
+      
+      console.log("----- Distance:", distance);
 
+      // 3 - If distance is 0 (the user rejected the geolocation), return 0 for error catching
+      if (distance === 0) {
+        return 0;
+      }
       // 3 - If distance is more than 30 km, return website as the result
-      if (shortestDistance > 30) {
-        console.log("----- Distance > 30 km");
+      else if (distance > 30) {
         nearestStore = ubicaciones[4];
         return nearestStore;
       }
@@ -35,12 +47,15 @@ async function nearestStore(userPosition) {
         shortestDistance = distance;
         nearestStore = ubicacion;
       }
+
     });
 
+    console.log("----- Nearest Store to return as ResultObjectTwo:", nearestStore)
     return nearestStore;
 
-  } catch {
+  } catch(error) {
     console.log("ERROR / CATCH");
+    console.log(error);
     return null;
   }
 

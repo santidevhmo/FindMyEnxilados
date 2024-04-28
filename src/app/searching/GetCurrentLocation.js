@@ -1,25 +1,23 @@
-// Source : https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
 
 export default function getCurrentLocation() {
 
-  return new Promise((resolve, reject) => {
+  let userPosition;
+
+  return new Promise((resolve) => {
     navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const userPosition = {
+      function (position) {
+        userPosition = {
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
         };
-
         console.log(`LATITUDE = ${userPosition.latitude}`);
         console.log(`LONGITUDE = ${userPosition.longitude}`);
-
         resolve(userPosition); // Resolve the promise with user's position
       },
-      (error) => {
-        console.error("Error getting user's location:", error);
-        reject(error); // Reject the promise with the error
-      },
-    );
+      function(error) {
+        console.log("Error getting user's location:", error);
+        userPosition = { latitude: 0, longitude: 0 }; // Set default position to 0,0
+        resolve(userPosition); // Return an error object instead of throwing an error
+      });
   });
-
 }

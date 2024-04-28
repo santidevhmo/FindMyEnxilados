@@ -24,7 +24,7 @@ export default function AbaceriaResult() {
           {/* ---- Top Row : ReturnBtn and Text ----- */}
           <ResultTopContent
             resultTitle={"RUUM Concept Store"}
-            imageURL={"https://res.cloudinary.com/dsx9xiq32/image/upload/v1713918792/FindMyEnxilados/Screenshot_2024-04-23_at_18-33-00_QUIENES_SOMOS_bbyanj.png"}
+            imageURL={"https://res.cloudinary.com/dsx9xiq32/image/upload/v1714266111/FindMyEnxilados/305851091_589681265942770_3152190955502217172_n_aofvnk.jpg"}
             returnPath={"/"}
           />
         </Row>
@@ -77,22 +77,14 @@ export default function AbaceriaResult() {
               <PhoneBtn url={"6623561894"}/>
               <span></span>
               <InstagramBtn url={"https://www.instagram.com/ruum.conceptstore/"}/>
+              <span></span>
+              <OpenGoogleMaps url={"https://maps.app.goo.gl/Jjt3nhPkDJy8UY19A"}/>
+              <span></span>
+              <OpenAppleMaps url={"https://maps.apple.com/?address=Calle%20Tlaxcala%20105,%20Centro,%2085000%20Ciudad%20Obreg%C3%B3n,%20Son.,%20Mexico&auid=5863341782153809644&ll=27.496213,-109.943339&lsp=9902&q=RUUM%20Concept%20Store"}/>
             </div>
           </Col>
         </Row>
 
-        {/* Contact Info : External Link Btn's */}
-        <Row className="gx-0 mt-2">
-          <div className={RUUMCSS.externalLinksTwo}>
-            <Col>
-              <OpenGoogleMaps url={"https://maps.app.goo.gl/Jjt3nhPkDJy8UY19A"}/>
-            </Col>
-            <separator></separator>
-            <Col>
-              <OpenAppleMaps url={"https://maps.apple.com/?address=Calle%20Tlaxcala%20105,%20Centro,%2085000%20Ciudad%20Obreg%C3%B3n,%20Son.,%20Mexico&auid=5863341782153809644&ll=27.496213,-109.943339&lsp=9902&q=RUUM%20Concept%20Store"}/>
-            </Col>
-          </div>
-        </Row>
 
         {/* Ver otros puntos" de venta Btn */}
         <Row className="mt-5 mb-5">
