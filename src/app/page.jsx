@@ -2,8 +2,12 @@ import StartPageCSS from "./StartPage.module.css";
 import BgRadar from "./components/backgroundRadar/BgRadar.js";
 import { NearestEnxilados } from "./components/openLinkButtons/ExternalLinkBtns.jsx";
 import Link from 'next/link';
+import mongoDBConnect from './api/(models)/region';
 
 export default function StartPage() {
+
+  mongoDBConnect();
+
   return (
 
     <div className={StartPageCSS.mainContainer}>
