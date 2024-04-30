@@ -21,7 +21,7 @@ A creative marketing website for "Enxilados" for users to find the nearest selli
 ## Back-end
 - [x] Implement Next.JS Routing for client-side navigation
 - [x] Create & pass a "Distance" prop for the Distance component
-- [ ] Watch YT Video "Nextjs Mongodb Despliegue en Vercel y Mongodb Atlas" : https://www.youtube.com/watch?v=2g2PxS1uiGQ
+- [x] Connect MongoDB to the project
 - [ ] Implement MongoDB PUSH requests for User region requests
 - [ ] Publish Website using Vercel
 
