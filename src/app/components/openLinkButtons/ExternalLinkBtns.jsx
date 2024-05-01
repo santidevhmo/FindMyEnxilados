@@ -193,6 +193,10 @@ function AllowLocation( { onAllowLocationClick } ) {
   );
 }
 
+function RequestRegion() {
+  
+}
+
 
 
 export {
