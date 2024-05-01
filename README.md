@@ -16,12 +16,14 @@ A creative marketing website for "Enxilados" for users to find the nearest selli
 - [x] Translate all result pages to code
 - [x] Update all ExternalLinkBtn's for every result page
 - [x] Add a response for when the location alert is rejected
-- [ ] Use AI to re-style the "Solicitar region" btn (Ask for the styling based on the styling of already-made components, pass him the react-google-autocomplete documentation
+- [ ] Finish re-styling the "Request location" button
 
 ## Back-end
 - [x] Implement Next.JS Routing for client-side navigation
 - [x] Create & pass a "Distance" prop for the Distance component
 - [x] Connect MongoDB to the project
+- [ ] Fix Google Maps API CORS error : running the API on local environment (localhost)
+- [ ] Save the selectd region variable to implement PUSH requests
 - [ ] Implement MongoDB PUSH requests for User region requests
 - [ ] Publish Website using Vercel
 
