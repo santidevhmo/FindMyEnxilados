@@ -22,7 +22,7 @@ A creative marketing website for "Enxilados" for users to find the nearest selli
 - [x] Implement Next.JS Routing for client-side navigation
 - [x] Create & pass a "Distance" prop for the Distance component
 - [x] Connect MongoDB to the project
-- [ ] Fix Google Maps API CORS error : running the API on local environment (localhost)
+- [x] Fix Google Maps API CORS error : running the API on local environment (localhost)
 - [ ] Save the selectd region variable to implement PUSH requests
 - [ ] Implement MongoDB PUSH requests for User region requests
 - [ ] Publish Website using Vercel
