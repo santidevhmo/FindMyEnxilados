@@ -32,3 +32,5 @@ A creative marketing website for "Enxilados" for users to find the nearest selli
 - [ ] Create a code guide about importing icons inside the /public/icons (Not necessary to use "././", etc)
 - [ ] Understand the use of "use client" on top of JSX files
 - [ ] Watch YT Code Academy video  "Full HTTP Networking Course – Fetch and REST APIs in JavaScript" : Fully comprehend Networking concepts & Difference between libraries such as AXIOS, Express, etc
+- [ ] Front-end : take LinkedIn Learning course "UX Foundations: Style Guides and Design Systems"
+- [ ] Front-end : look up for course or YT video of "Introduction to Tailwind CSS"
