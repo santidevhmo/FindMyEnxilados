@@ -16,15 +16,12 @@ A creative marketing website for "Enxilados" for users to find the nearest selli
 - [x] Translate all result pages to code
 - [x] Update all ExternalLinkBtn's for every result page
 - [x] Add a response for when the location alert is rejected
-- [ ] Finish re-styling the "Request location" button
 
 ## Back-end
 - [x] Implement Next.JS Routing for client-side navigation
 - [x] Create & pass a "Distance" prop for the Distance component
 - [x] Connect MongoDB to the project
 - [x] Fix Google Maps API CORS error : running the API on local environment (localhost)
-- [ ] Save the selectd region variable to implement PUSH requests
-- [ ] Implement MongoDB PUSH requests for User region requests
 - [ ] Publish Website using Vercel
 
 ## After publishing
@@ -35,3 +32,7 @@ A creative marketing website for "Enxilados" for users to find the nearest selli
 - [ ] Front-end : take LinkedIn Learning course "UX Foundations: Style Guides and Design Systems"
 - [ ] Front-end : look for resources and get better at "Responsive layouts" in general (Swift, ReactJS, React Native, etc)
 - [ ] Front-end : look up for course or YT video of "Introduction to Tailwind CSS"
+Request Location Button
+- [ ] Finish re-styling the "Request location" button
+- [ ] Save the selectd region variable to implement PUSH requests
+- [ ] Implement MongoDB PUSH requests for User region requests
