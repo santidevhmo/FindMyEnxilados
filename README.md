@@ -32,6 +32,7 @@ A creative marketing website for "Enxilados" for users to find the nearest selli
 - [ ] Front-end : take LinkedIn Learning course "UX Foundations: Style Guides and Design Systems"
 - [ ] Front-end : look for resources and get better at "Responsive layouts" in general (Swift, ReactJS, React Native, etc)
 - [ ] Front-end : look up for course or YT video of "Introduction to Tailwind CSS"
+
 Request Location Button
 - [ ] Finish re-styling the "Request location" button
 - [ ] Save the selectd region variable to implement PUSH requests
