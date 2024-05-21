@@ -6,7 +6,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { ReturnBtn } from '../components/openLinkButtons/ExternalLinkBtns.jsx';
 import PuntosDeVentaCSS from './PuntosDeVenta.module.css';
-import SolicitarRegionBtn from '../components/solicitarRegionBtn/SolicitarRegionBtn.jsx';
 import Link from "next/link";
 
 export default function PuntosDeVenta(previousRoutePath) {
@@ -60,11 +59,6 @@ export default function PuntosDeVenta(previousRoutePath) {
                     openLinkURL="https://maps.app.goo.gl/KQbuxha2HeN1VXhz5"
                     sellingStoreText="la cubiella sc"
                 />
-            </Row>
-
-            {/* Solicitar región Btn */}
-            <Row className='mt-5 mb-5'>
-                <SolicitarRegionBtn />
             </Row>
             
         </Container>

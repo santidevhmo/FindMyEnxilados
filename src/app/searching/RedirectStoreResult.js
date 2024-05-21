@@ -18,19 +18,15 @@ async function redirectStoreResult() {
 
     } else {
 
-      console.log("----- User's Position:", userPosition);
-
       // 2. Get nearest distance
       const resultObject = await nearestStore(userPosition);
-
-      console.log("----- Nearest Store to return as ResultObject:", resultObject)
 
       // 3. Return result path
       const resultStoreName = resultObject.title;
       // Return the path to the store's page based on the store's title
       if (resultStoreName === "Local Enxilados") {
         return '/local-enxilados';
-      } else if (resultStoreName === "Abaceria Concept Store") {
+      } else if (resultStoreName === "Abaceria Food Concept Store") {
         return '/abaceria-concept-store';
       } else if (resultStoreName === "RUUM Concept Store") {
         return '/RUUM-concept-store';

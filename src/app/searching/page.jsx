@@ -5,7 +5,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import redirectStoreResult from "./RedirectStoreResult";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { AllowLocation } from  "../components/openLinkButtons/ExternalLinkBtns.jsx";
 
@@ -27,8 +27,7 @@ export default function LoadingPage() {
 
     // redirectPath is the URL path to open the nearest store's page
     const redirectPath = await redirectStoreResult();
-
-    console.log("Redirect path:", redirectPath);
+    console.log("Redirect path is", redirectPath);
 
     if (redirectPath === "location-not-allowed") {
       setChangeLocationUI(true);
@@ -40,9 +39,13 @@ export default function LoadingPage() {
 
   }
 
+  const hasStartedSearching = useRef(false);
   // Start searching for the nearest store when the component is mounted
   useEffect(() => {
-    startSearchingStore();
+    if (!hasStartedSearching.current) {
+      hasStartedSearching.current = true;
+      startSearchingStore();
+    }
   }, []);
 
   return (

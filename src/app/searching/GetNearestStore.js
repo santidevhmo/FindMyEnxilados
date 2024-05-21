@@ -8,6 +8,7 @@ async function nearestStore(userPosition) {
 
   // Initialize variables to keep track of the nearest store and its distance
   let nearestStore;
+  let distance;
 
   try {
 
@@ -18,8 +19,11 @@ async function nearestStore(userPosition) {
       const storeLongitude = ubicacion.coordinates[1];
 
       // 2.1 - Calculate distance using Haversine formula
-      const distance =(() => {
-        if (userPosition.latitude === 0 && userPosition.longitude === 0) { 
+      distance =(() => {
+        // If both latitude and longitude are 0, skip this iteration
+        if (storeLatitude === 0 && storeLongitude === 0) {
+          return;
+        } else if (userPosition.latitude === 0 && userPosition.longitude === 0) { 
           return 0;
         } else {
           return calculateDistance(
@@ -30,27 +34,32 @@ async function nearestStore(userPosition) {
           );
         }
       })();
-      
-      console.log("----- Distance:", distance);
 
-      // 3 - If distance is 0 (the user rejected the geolocation), return 0 for error catching
-      if (distance === 0) {
-        return 0;
-      }
-      // 3 - If distance is more than 30 km, return website as the result
-      else if (distance > 30) {
-        nearestStore = ubicaciones[4];
-        return nearestStore;
-      }
-      // 2.2 - Update nearest store if the distance is shorter
-      else if (distance < shortestDistance) {
+      // Initialize the value of shortestDistance to start comparison
+      if (shortestDistance === 0) {
         shortestDistance = distance;
+        nearestStore = ubicacion;
+      } // If distance is 0 (the user rejected the geolocation), return 0 for error catching
+      else if (distance === 0) {
+        return 0;
+      } else if (distance === undefined) {
+        return;
+      }
+
+      // 2.2 - Update nearest store if the distance value is bigger than the shortestDistance (the bigger the number, the shorter)
+      console.log(`If distance ${distance} is bigger than shortestDistance ${shortestDistance}`)
+      if (distance > shortestDistance) {
+        shortestDistance = distance;
+        console.log(`Nearest store is now ${ubicacion.title}`)
         nearestStore = ubicacion;
       }
 
+      console.log(`Current nearest store value is ${JSON.stringify(nearestStore, null, 2)}`)
+
     });
 
-    console.log("----- Nearest Store to return as ResultObjectTwo:", nearestStore)
+    // // 3 - If distance is more than ____ km, return website as the result
+    console.log(`Nearest store object to return is ${JSON.stringify(nearestStore, null, 2)}`)
     return nearestStore;
 
   } catch(error) {
@@ -65,18 +74,17 @@ async function nearestStore(userPosition) {
 /* "To find the nearest store to the user's location using their latitude and longitude, you can calculate the distance
 between the user's location and each store's coordinates using the Haversine formula, which is commonly used to calculate distances between two points on a sphere."*/
 function calculateDistance(lat1, lon1, lat2, lon2) {
-  const R = 6371; // Radius of the earth in km
-  const dLat = deg2rad(lat2 - lat1); // deg2rad below
+  const R = 6371; // Radius of the Earth in kilometers
+  const dLat = deg2rad(lat2 - lat1);
   const dLon = deg2rad(lon2 - lon1);
   const a =
     Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos(deg2rad(lat1)) *
-    Math.cos(deg2rad(lat2)) *
-    Math.sin(dLon / 2) *
-    Math.sin(dLon / 2);
+    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+    Math.sin(dLon / 2) * Math.sin(dLon / 2)
+    ;
   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  const d = R * c; // Distance in km
-  return d;
+  const distance = R * c; // Distance in km
+  return distance;
 }
 
 function deg2rad(deg) {

@@ -10,8 +10,6 @@ export default function getCurrentLocation() {
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
         };
-        console.log(`LATITUDE = ${userPosition.latitude}`);
-        console.log(`LONGITUDE = ${userPosition.longitude}`);
         resolve(userPosition); // Resolve the promise with user's position
       },
       function(error) {

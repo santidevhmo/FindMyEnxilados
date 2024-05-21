@@ -5,8 +5,7 @@ import ResultTopContent from "../components/resultTopContent/ResultTopContent.js
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { PhoneBtn, InstagramBtn, WebsiteBtn, PuntosDeVentaBtn, OpenAppleMaps, OpenGoogleMaps } from "../components/openLinkButtons/ExternalLinkBtns.jsx";
-import SolicitarRegionBtn from '../components/solicitarRegionBtn/SolicitarRegionBtn.jsx';
+import { WebsiteBtn, PuntosDeVentaBtn } from "../components/openLinkButtons/ExternalLinkBtns.jsx";
 
 export default function AbaceriaConceptStore() {
 
@@ -38,17 +37,6 @@ export default function AbaceriaConceptStore() {
                                     Actualmente no se encuentra ningún lugar físico de venta de enxilados en tu región. Sin embargo, nuestra pagina web cuenta con envios nacionales e internacionales.
                                 </h3>
                             </div>
-                        </div>
-                    </Col>
-                </Row>
-                <Row className="mt-5 mb-5 gx-2">
-                    {/* Maps : External Link Btn's */}
-                    <Col className="text-center" xl={2}>
-                        <h4>Quieres que enxilados venda fisicamente en tu región?</h4>
-                    </Col>
-                    <Col>
-                        <div className={PaginaWebCSS.externalLinks}>
-                            <SolicitarRegionBtn />
                         </div>
                     </Col>
                 </Row>
