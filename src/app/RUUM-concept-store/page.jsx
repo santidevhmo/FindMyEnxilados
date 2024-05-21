@@ -33,7 +33,7 @@ export default function AbaceriaResult() {
         <Row className="gx-2">
           {/* gx (Gutter) = "default spacing in Bootstrap Col's & Rows  */}
           {/* -- Distance Box */}
-          <Col xs={4} sm={3} md={3} lg={2}>
+          {/* <Col xs={4} sm={3} md={3} lg={2}>
             <div className={RUUMCSS.distanceBox}>
               <p>Distancia desde tu ubicación actual:</p>
               <div className={RUUMCSS.distanceNumbers}>
@@ -41,9 +41,9 @@ export default function AbaceriaResult() {
                 <h3>km</h3>
               </div>
             </div>
-          </Col>
+          </Col> */}
           {/* -- Address Box */}
-          <Col xs={8} sm={9} md={9} lg={10}>
+          <Col>
             <div className={RUUMCSS.addressBox}>
               <p>Dirección:</p>
               <h3 className="mt-2">
