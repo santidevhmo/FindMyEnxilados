@@ -11,7 +11,7 @@ import ReactGA from 'react-ga4'; // Google Analytics Package
 export default function StartPage() {
 
   useNoScroll();
-  ReactGA.initialize('G-C51Z8SMTM0');
+  ReactGA.initialize('G-M1SN6MVP6T');
 
   return (
 
