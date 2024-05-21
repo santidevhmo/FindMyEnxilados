@@ -1,9 +1,15 @@
+"use client"; // Add this directive
+
 import StartPageCSS from "./StartPage.module.css";
 import BgRadar from "./components/backgroundRadar/BgRadar.js";
 import { NearestEnxilados } from "./components/openLinkButtons/ExternalLinkBtns.jsx";
 import Link from 'next/link';
+import './globals.css'; 
+import useNoScroll from './useNoScroll'; 
 
 export default function StartPage() {
+
+  useNoScroll();
 
   return (
 
