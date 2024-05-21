@@ -5,13 +5,19 @@ import BgRadar from "./components/backgroundRadar/BgRadar.js";
 import { NearestEnxilados } from "./components/openLinkButtons/ExternalLinkBtns.jsx";
 import Link from 'next/link';
 import './globals.css'; 
-import useNoScroll from './useNoScroll'; 
+import useNoScroll from './useNoScroll';
 import ReactGA from 'react-ga4'; // Google Analytics Package
+import React, { useEffect } from 'react';
 
 export default function StartPage() {
 
   useNoScroll();
   ReactGA.initialize('G-M1SN6MVP6T');
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }, []);
+  
 
   return (
 
