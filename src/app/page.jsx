@@ -6,10 +6,12 @@ import { NearestEnxilados } from "./components/openLinkButtons/ExternalLinkBtns.
 import Link from 'next/link';
 import './globals.css'; 
 import useNoScroll from './useNoScroll'; 
+import ReactGA from 'react-ga4'; // Google Analytics Package
 
 export default function StartPage() {
 
   useNoScroll();
+  ReactGA.initialize('G-C51Z8SMTM0');
 
   return (
 
