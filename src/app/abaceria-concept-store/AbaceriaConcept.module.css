@@ -310,8 +310,17 @@
         height: 35vh;
     }
 
+    .addressBox {
+        border-radius: 20px;
+    }
+
+    .addressBox p {
+        font-size: 3vw;
+    }
+
     .addressBox h3 {
         font-size: 8vw;
+        padding: 0px 20px 15px 20px;
     }
 
     .distanceNumbers h1 {
@@ -320,6 +329,10 @@
 
     .horariosBox {
         padding-bottom: 20px;
+    }
+
+    .horariosBox p {
+        font-size: 3vw;
     }
 
     .horariosBox h3, .horariosBox h4 {

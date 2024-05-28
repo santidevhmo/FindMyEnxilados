@@ -157,3 +157,21 @@
     }
 
 }
+
+/* media rule for 600px */
+
+@media (max-width: 600px) {
+
+    /* -- Return Button -- */
+    .returnBtn {
+        height: 35px;
+        width: 35px;
+        margin-right: 40px;
+    }
+
+    .externalLinkBtn p {
+        font-size: 1rem;
+        line-height: 20px;
+    }
+
+}

@@ -43,7 +43,7 @@
 /* ----- Content ----- */
 
 .imgContainer {
-    display: block;
+    display: flex;
     margin: auto;
     width: 80%;
     height: 25vw;
@@ -133,6 +133,25 @@
 
     .descriptionText {
         font-size: 18px;
+    }
+
+}
+
+@media (max-width: 777px) {
+
+    /* "Quienes Somos" title */
+    .title {
+        font-size: 110px;
+        line-height: 75%;
+    }
+
+    .returnBtn {
+        height: 35px;
+        width: 35px;
+    }
+
+    .returnBtn img {
+        width: 55%;
     }
 
 }

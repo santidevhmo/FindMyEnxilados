@@ -19,7 +19,7 @@ export default function QuienesSomos(url) {
 
           {/* Top Row : Title & Return Button */}
           <Row>
-            <Col>
+            <Col >
               {/* Add a NextJS link */}
               <Link href="/">
                 <button className={QuienesSomosCSS.returnBtn}>
