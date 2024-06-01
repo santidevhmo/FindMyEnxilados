@@ -11,7 +11,7 @@ import Link from 'next/link';
 export default function QuienesSomos(url) {
 
   const returnArrow = "/assets/icons/returnArrow.svg";
-  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 400);
+  const [isMobileView, setIsMobileView] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {

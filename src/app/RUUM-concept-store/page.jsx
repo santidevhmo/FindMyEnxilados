@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -15,7 +14,7 @@ export default function AbaceriaResult() {
   // Class variable created to have gx-0 + the CSS module class
   const cssModuleGxClass = `gx-0 ${RUUMCSS.resultContainer}`;
 
-  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 571);
+  const [isMobileView, setIsMobileView] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {

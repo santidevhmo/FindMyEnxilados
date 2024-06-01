@@ -13,7 +13,7 @@ export default function AbaceriaConceptStore() {
     // Class variable created to have gx-0 + the CSS module class
     const cssModuleGxClass = `gx-0 ${PaginaWebCSS.resultContainer}`;
 
-    const [isMobileView, setIsMobileView] = useState(window.innerWidth < 400);
+    const [isMobileView, setIsMobileView] = useState(false);
 
     useEffect(() => {
       const handleResize = () => {
