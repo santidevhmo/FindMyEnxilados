@@ -1,9 +1,9 @@
 
 .quienesSomosBody {
-    overflow: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: auto;
 }
 
 /* ----- Top Container ----- */
@@ -59,7 +59,7 @@
     justify-content: center;
     margin: 0 auto;
     background-color: black;
-    border:2.2px solid black;
+    border: 2.2px solid black;
     border-radius: 25px;
 }
 
@@ -137,11 +137,11 @@
 
 }
 
-@media (max-width: 777px) {
+@media (max-width: 400px) {
 
     /* "Quienes Somos" title */
     .title {
-        font-size: 110px;
+        font-size: 90px;
         line-height: 75%;
     }
 
@@ -152,6 +152,23 @@
 
     .returnBtn img {
         width: 55%;
+    }
+
+    .imgContainer {
+        height: 65vw;
+        width: 95%;
+    }
+
+    .descriptionText {
+        font-size: 14px;
+    }
+
+    .externalLinksContainer:nth-child(2) {
+        padding-bottom: 0px;
+    }
+
+    .externalLinksContainer:nth-child(3) {
+        padding-bottom: 20px;
     }
 
 }

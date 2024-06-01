@@ -1,13 +1,12 @@
 
 "use client";
 
+import React, { useState, useEffect } from 'react';
 import ResultTopContent from "../components/resultTopContent/ResultTopContent.jsx";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import RUUMCSS from "./RUUM.module.css";
-import React from "react";
-import { shortestDistance } from "../searching/GetNearestStore";
 
 import { PhoneBtn, InstagramBtn, WebsiteBtn, PuntosDeVentaBtn, OpenAppleMaps, OpenGoogleMaps } from "../components/openLinkButtons/ExternalLinkBtns.jsx";
 
@@ -16,8 +15,19 @@ export default function AbaceriaResult() {
   // Class variable created to have gx-0 + the CSS module class
   const cssModuleGxClass = `gx-0 ${RUUMCSS.resultContainer}`;
 
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 571);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth < 571);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    
+
     <div>
       <Container fluid className={cssModuleGxClass}>
         <Row className="justify-content-center">
@@ -52,8 +62,9 @@ export default function AbaceriaResult() {
             </div>
           </Col>
         </Row>
+
         <Row className="mt-2 gx-2">
-          {/* -- Horarios Box */}
+          {/* -- Horarios Box -- */}
           <Col sm={6} md={6} lg={8}>
             <div className={RUUMCSS.horariosBox}>
               <p>Horarios:</p>
@@ -64,27 +75,99 @@ export default function AbaceriaResult() {
                   <h4>3:30 pm - 7:00 pm</h4>
                 </div>
                 <div className={RUUMCSS.horariosRow}>
-                  <h3>sabado</h3>
+                  <h3>Sábado</h3>
                   <h4>11:00 am - 3:30 pm</h4>
                 </div>
               </div>
             </div>
           </Col>
 
-          {/* Maps : External Link Btn's */}
-          <Col sm={6} md={6} lg={4}>
+          {isMobileView ? (
+            <Col sm={6} md={6} lg={4}>
+
+              <div className={RUUMCSS.externalLinks}>
+                <PhoneBtn url={"6623561894"} />
+                <span></span>
+                <InstagramBtn url={"https://www.instagram.com/ruum.conceptstore/"} />
+              </div>
+
+              <div className={RUUMCSS.externalLinksTwo}>
+                <Col>
+                  <OpenGoogleMaps url={"https://maps.app.goo.gl/Jjt3nhPkDJy8UY19A"} />
+                </Col>
+                <separator></separator>
+                <Col>
+                  <OpenAppleMaps url={"https://maps.apple.com/?address=Calle%20Tlaxcala%20105,%20Centro,%2085000%20Ciudad%20Obreg%C3%B3n,%20Son.,%20Mexico&auid=5863341782153809644&ll=27.496213,-109.943339&lsp=9902&q=RUUM%20Concept%20Store"} />
+                </Col>
+              </div>
+
+            </Col>
+          ) : (
+            // Contact Info : External Link Btn's
+            <Col sm={6} md={6} lg={4}>
+
+              <div className={RUUMCSS.externalLinks}>
+                <PhoneBtn url={"6623561894"} />
+                <span></span>
+                <InstagramBtn url={"https://www.instagram.com/ruum.conceptstore/"} />
+                <span></span>
+                <OpenGoogleMaps url={"https://maps.app.goo.gl/Jjt3nhPkDJy8UY19A"} />
+                <span></span>
+                <OpenAppleMaps url={"https://maps.apple.com/?address=Calle%20Tlaxcala%20105,%20Centro,%2085000%20Ciudad%20Obreg%C3%B3n,%20Son.,%20Mexico&auid=5863341782153809644&ll=27.496213,-109.943339&lsp=9902&q=RUUM%20Concept%20Store"} />
+              </div>
+
+            </Col>
+          )}
+        </Row>
+
+      { }
+          {/* <Col sm={6} md={6} lg={4}>
             <div className={RUUMCSS.externalLinks}>
               <PhoneBtn url={"6623561894"}/>
               <span></span>
               <InstagramBtn url={"https://www.instagram.com/ruum.conceptstore/"}/>
-              <span></span>
-              <OpenGoogleMaps url={"https://maps.app.goo.gl/Jjt3nhPkDJy8UY19A"}/>
-              <span></span>
-              <OpenAppleMaps url={"https://maps.apple.com/?address=Calle%20Tlaxcala%20105,%20Centro,%2085000%20Ciudad%20Obreg%C3%B3n,%20Son.,%20Mexico&auid=5863341782153809644&ll=27.496213,-109.943339&lsp=9902&q=RUUM%20Concept%20Store"}/>
             </div>
           </Col>
-        </Row>
+        </Row> */}
 
+        {/* Contact Info : External Link Btn's */}
+        {/* <Row className="gx-0 mt-2">
+          <div className={RUUMCSS.externalLinksTwo}>
+            <Col>
+              <OpenGoogleMaps url={"https://maps.app.goo.gl/Jjt3nhPkDJy8UY19A"}/>
+            </Col>
+            <separator></separator>
+            <Col>
+              <OpenAppleMaps url={"https://maps.apple.com/?address=Calle%20Tlaxcala%20105,%20Centro,%2085000%20Ciudad%20Obreg%C3%B3n,%20Son.,%20Mexico&auid=5863341782153809644&ll=27.496213,-109.943339&lsp=9902&q=RUUM%20Concept%20Store"}/>
+            </Col>
+          </div>
+        </Row> */}
+
+          {/* {isMobileView ? (
+            <Col sm={6} md={6} lg={4}>
+              <div className={RUUMCSS.externalLinks}>
+                <PhoneBtn url={"6623561894"} />
+                <span></span>
+                <InstagramBtn url={"https://www.instagram.com/ruum.conceptstore/"} />
+                <span></span>
+                <OpenGoogleMaps url={"https://maps.app.goo.gl/Jjt3nhPkDJy8UY19A"} />
+                <span></span>
+                <OpenAppleMaps url={"https://maps.apple.com/?address=Calle%20Tlaxcala%20105,%20Centro,%2085000%20Ciudad%20Obreg%C3%B3n,%20Son.,%20Mexico&auid=5863341782153809644&ll=27.496213,-109.943339&lsp=9902&q=RUUM%20Concept%20Store"} />
+              </div>
+            </Col>
+          ) : (
+            // Contact Info : External Link Btn's
+            <div className={RUUMCSS.externalLinks}>
+              <PhoneBtn url={"6623561894"} />
+              <span></span>
+              <InstagramBtn url={"https://www.instagram.com/ruum.conceptstore/"} />
+              <span></span>
+              <OpenGoogleMaps url={"https://maps.app.goo.gl/Jjt3nhPkDJy8UY19A"} />
+              <span></span>
+              <OpenAppleMaps url={"https://maps.apple.com/?address=Calle%20Tlaxcala%20105,%20Centro,%2085000%20Ciudad%20Obreg%C3%B3n,%20Son.,%20Mexico&auid=5863341782153809644&ll=27.496213,-109.943339&lsp=9902&q=RUUM%20Concept%20Store"} />
+            </div>
+          )} */}
+        {/* </Row> */}
 
         {/* Ver otros puntos" de venta Btn */}
         <Row className="mt-5 mb-5">

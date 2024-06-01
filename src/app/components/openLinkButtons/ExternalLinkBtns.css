@@ -118,12 +118,13 @@
     font-family: "CircularMedium";
     background-color: white;
     font-size: 1.3rem;
-    border: 2px solid;
+    border: 2px solid black;
     text-decoration: none;
 }
 
 #puntosDeVenta p { 
     padding: 10px;
+    color: black;
 }
 
 #puntosDeVenta:active {
@@ -173,5 +174,17 @@
         font-size: 1rem;
         line-height: 20px;
     }
+
+}
+
+/* Add media rule for 400px */
+@media (max-width: 400px) {
+
+    .externalLinkBtn p {
+        font-size: .9rem;
+        line-height: 20px;
+    }
+
+    
 
 }

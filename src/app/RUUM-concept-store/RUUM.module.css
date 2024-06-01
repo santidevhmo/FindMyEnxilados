@@ -225,7 +225,7 @@
   }
 
   .externalLinks span {
-    height: 2vh;
+    height: 5vh;
   }
 
 .externalLinks > * {
@@ -299,19 +299,28 @@
 
 }
 
-/* Add a media query for 254 screen width */
-@media (max-width: 576px) {
+/* Add a media query for 571 screen width */
+@media (max-width: 571px) {
 
     .resultTitle {
-        font-size: 20vw;
+        font-size: 25vw;
     }
 
     .imgContainer {
         height: 35vh;
     }
 
+    .addressBox {
+        border-radius: 20px;
+    }
+
+    .addressBox p {
+        font-size: 3vw;
+    }
+
     .addressBox h3 {
         font-size: 8vw;
+        padding: 0px 20px 15px 20px;
     }
 
     .distanceNumbers h1 {
@@ -322,18 +331,35 @@
         padding-bottom: 20px;
     }
 
+    .horariosBox p {
+        font-size: 3vw;
+    }
+
     .horariosBox h3, .horariosBox h4 {
         font-size: 9vw;
     }
 
     .horariosContent {
         padding-top: 10px;
-        padding-bottom: 10px
-    }
-
-    .externalLinks {
-        padding-top: 10px;
-    }
-
-
+            padding-bottom: 10px
+        }
+        
+        .externalLinks {
+            padding-top: 15px;
+            height: 75%;
+        }
+        
+        .externalLinks span {
+            height: 2vh;
+        }
+        
+        /* External Link's : Bottom row  */
+        .externalLinksTwo {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .externalLinksTwo separator {
+            width: 10px;
+        }
 }

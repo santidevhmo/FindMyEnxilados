@@ -8,7 +8,7 @@ export default function ResultTopContent( {resultTitle, imageURL, returnPath} ) 
     <div className={ResultTopContentCSS.contentContainer}>
       <div className={ResultTopContentCSS.topContent}>
         {/* ---- Top Row : ReturnBtn and Text ----- */}
-        <Row className="mt-5 align-items-center">
+        <Row className="mt-4 align-items-center">
           <Col>
             <ReturnBtn previousRoute={returnPath} />
           </Col>

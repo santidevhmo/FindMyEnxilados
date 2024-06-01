@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState, useEffect } from 'react';
 import PaginaWebCSS from "./PaginaWeb.module.css";
 import ResultTopContent from "../components/resultTopContent/ResultTopContent.jsx";
 import Container from "react-bootstrap/Container";
@@ -11,6 +12,18 @@ export default function AbaceriaConceptStore() {
 
     // Class variable created to have gx-0 + the CSS module class
     const cssModuleGxClass = `gx-0 ${PaginaWebCSS.resultContainer}`;
+
+    const [isMobileView, setIsMobileView] = useState(window.innerWidth < 400);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobileView(window.innerWidth < 400);
+      };
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+  
 
     return (
         <div>
@@ -42,16 +55,23 @@ export default function AbaceriaConceptStore() {
                 </Row>
 
                 {/* Contact Info : External Link Btn's */}
-                <Row className="gx-0 mt-2 mb-5">
+                <Row className="gx-0 mt-2">
                     <div className={PaginaWebCSS.externalLinksTwo}>
                         <Col>
-                        <WebsiteBtn url={"https://enxilados.com.mx/"}/>
+                            <WebsiteBtn url={"https://enxilados.com.mx/"} />
                         </Col>
-                        <separator></separator>
-                        <Col>
-                        <PuntosDeVentaBtn />
-                        </Col>
+                        {!isMobileView && <separator></separator>}
+                        {!isMobileView && (
+                            <Col>
+                                <PuntosDeVentaBtn />
+                            </Col>
+                        )}
                     </div>
+                    {isMobileView && (
+                        <div className={PaginaWebCSS.externalLinksTwo}>
+                            <PuntosDeVentaBtn />
+                        </div>
+                    )}
                 </Row>
 
             </Container>

@@ -55,25 +55,27 @@
 @media (max-width: 600px) {
 
     .contentContainer {
-        width: 90%;
+        width: 100%;
     }
 
     .title {
-        font-size: 0.9em;
+        font-size: 0.7em;
         line-height: 15px;
+        padding-right: 25px;
+        padding-top: 15px;
     }
 
     .resultTitle {
         font-family: "Medium";
         color: black;
-        font-size: 15vw;
+        font-size: 20vw;
         text-align: center;
         line-height: 75%;
     }
 
     .imageContainer {
         width: 100vw;
-        height: 50vw;
+        height: 55vw;
     }
 
 }

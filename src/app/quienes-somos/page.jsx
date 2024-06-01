@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState, useEffect } from 'react';
 import QuienesSomosCSS from "./QuienesSomos.module.css";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -10,12 +11,22 @@ import Link from 'next/link';
 export default function QuienesSomos(url) {
 
   const returnArrow = "/assets/icons/returnArrow.svg";
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 400);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth < 400);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className={QuienesSomosCSS.quienesSomosBody}>
       <Container>
         
-        <Row className="justify-content-md-center mt-5">
+        <Row className="justify-content-center align-items-center mt-5">
 
           {/* Top Row : Title & Return Button */}
           <Row>
@@ -62,11 +73,15 @@ export default function QuienesSomos(url) {
             </div>
             <div className={QuienesSomosCSS.externalLinksContainer}>
               <PhoneBtn />
-              <span></span>
-              <PhysicalLocationBtn url={"https://maps.app.goo.gl/9TS6mDhL5K2ZVSGd7"} />
+              {!isMobileView && <span></span>}
+              {!isMobileView && <PhysicalLocationBtn url={"https://maps.app.goo.gl/9TS6mDhL5K2ZVSGd7"} />}
             </div>
+            {isMobileView && (
+              <div className={QuienesSomosCSS.externalLinksContainer}>
+                <PhysicalLocationBtn url={"https://maps.app.goo.gl/9TS6mDhL5K2ZVSGd7"} />
+              </div>
+            )}
           </Col>
-
         </Row>
       </Container>
     </div>

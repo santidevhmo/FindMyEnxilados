@@ -303,30 +303,12 @@
         height: 35vh;
     }
 
-    .addressBox h3 {
-        font-size: 8vw;
+    .descriptionText h3 {
+        font-size: 1em;
     }
-
-    .distanceNumbers h1 {
-        font-size: 16vw;
-    }
-
-    .horariosBox {
-        padding-bottom: 20px;
-    }
-
-    .horariosBox h3, .horariosBox h4 {
-        font-size: 9vw;
-    }
-
-    .horariosContent {
-        padding-top: 10px;
-        padding-bottom: 10px
-    }
-
+    
     .externalLinks {
         padding-top: 10px;
     }
-
 
 }

@@ -40,6 +40,7 @@
     position: relative;
     cursor: pointer;
     font-family: "CircularMedium";
+    color: black;
     font-size: 23px;
     padding: 22px;
     width: 445px;
@@ -82,23 +83,21 @@
     .title {
         padding-top: 15%;
     }
-    .encontrarTiendaBtn,
-    .quienesSomosBtn {
-        font-size: 18px;
-        padding: 17px;
-        width: 360px;
-    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 450px) {
     .title h1 {
-        font-size: 170px;
+        font-size: 120px;
+    }
+
+    .encontrarTiendaBtn {
+        margin-top: 25px;
     }
 
     .encontrarTiendaBtn,
     .quienesSomosBtn {
-        font-size: 20px;
-        padding: 20px;
-        width: 380px;
+        font-size: 14px;
+        padding: 18px;
+        width: 250px;
     }
 }

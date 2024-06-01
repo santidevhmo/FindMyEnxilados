@@ -86,7 +86,7 @@ export default function AbaceriaResult() {
         <Row className="gx-0 mt-2">
           <div className={LocalEnxiladosCSS.externalLinksTwo}>
             <Col>
-              <OpenGoogleMaps url={"https://maps.app.goo.gl/F2Qvt9A9JmnXU8yW9"}/>
+              <OpenGoogleMaps url={"https://maps.app.goo.gl/nBujpBhkdLC6Bh538"}/>
             </Col>
             <separator></separator>
             <Col>

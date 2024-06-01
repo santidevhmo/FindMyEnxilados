@@ -300,10 +300,10 @@
 }
 
 /* Add a media query for 254 screen width */
-@media (max-width: 576px) {
+@media (max-width: 500px) {
 
     .resultTitle {
-        font-size: 20vw;
+        font-size: 25vw;
     }
 
     .imgContainer {
