@@ -96,8 +96,19 @@
 
     .encontrarTiendaBtn,
     .quienesSomosBtn {
+        font-size: 16px;
+        padding: 18px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 350px) { 
+
+    .encontrarTiendaBtn,
+    .quienesSomosBtn {
         font-size: 14px;
         padding: 18px;
         width: 250px;
     }
+
 }
