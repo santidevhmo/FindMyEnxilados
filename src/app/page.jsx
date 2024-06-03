@@ -21,9 +21,7 @@ export default function StartPage() {
 
   return (
     <>
-      <Head>
-        <meta name="theme-color" content="#319197" />
-      </Head>
+
       <div className={StartPageCSS.mainContainer}>
 
         {/* Background Radar Component */}
