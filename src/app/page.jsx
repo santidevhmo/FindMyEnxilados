@@ -17,32 +17,34 @@ export default function StartPage() {
   useEffect(() => {
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   }, []);
-  
 
   return (
 
-    <div className={StartPageCSS.mainContainer}>
-      
-      {/* Background Radar Component */}
-      <div className={StartPageCSS.radarContainer}>
-        <BgRadar />
+    <meta name="theme-color" content="#319197">
+
+      <div className={StartPageCSS.mainContainer}>
+
+        {/* Background Radar Component */}
+        <div className={StartPageCSS.radarContainer}>
+          <BgRadar />
+        </div>
+
+        {/* Main title container */}
+        <div className={StartPageCSS.title}>
+          <h1>find</h1>
+          <h1>my</h1>
+          <h1>enxilados</h1>
+        </div>
+
+        <Link href="/searching">
+          <NearestEnxilados />
+        </Link>
+
+        <Link href="/quienes-somos">
+          <button className={StartPageCSS.quienesSomosBtn}>Quienes somos</button>
+        </Link>
+
       </div>
-
-      {/* Main title container */}
-      <div className={StartPageCSS.title}>
-        <h1>find</h1>
-        <h1>my</h1>
-        <h1>enxilados</h1>
-      </div>
-
-      <Link href="/searching">
-        <NearestEnxilados />
-      </Link>
-
-      <Link href="/quienes-somos">
-        <button className={StartPageCSS.quienesSomosBtn}>Quienes somos</button>
-      </Link>
-      
-    </div>
+    </meta>
   );
 }
