@@ -4,6 +4,7 @@ import StartPageCSS from "./StartPage.module.css";
 import BgRadar from "./components/backgroundRadar/BgRadar.js";
 import { NearestEnxilados } from "./components/openLinkButtons/ExternalLinkBtns.jsx";
 import Link from 'next/link';
+import Head from 'next/head'; // Import Head component
 import './globals.css'; 
 import useNoScroll from './useNoScroll';
 import ReactGA from 'react-ga4'; // Google Analytics Package
@@ -19,9 +20,10 @@ export default function StartPage() {
   }, []);
 
   return (
-
-    <meta name="theme-color" content="#319197">
-
+    <>
+      <Head>
+        <meta name="theme-color" content="#319197" />
+      </Head>
       <div className={StartPageCSS.mainContainer}>
 
         {/* Background Radar Component */}
@@ -45,6 +47,6 @@ export default function StartPage() {
         </Link>
 
       </div>
-    </meta>
+    </>
   );
 }
