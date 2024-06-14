@@ -72,6 +72,24 @@
     background-color: #202020;
 }
 
+.developedBy {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    /* justify-content: baseline; */
+    color: white;
+    font-size: 0.8rem;
+}
+
+.developedBy a {
+    color: white;
+    text-decoration: none;
+}
+
+.developedBy a:hover {
+    color: gray;
+}
+
 @media (max-width: 1266px) {
     .title {
         padding-top: 5%;

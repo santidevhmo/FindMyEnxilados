@@ -44,6 +44,8 @@ export default function StartPage() {
           <button className={StartPageCSS.quienesSomosBtn}>Quienes somos</button>
         </Link>
 
+        <h2 className={StartPageCSS.developedBy}>🧑‍💻 Developed & Designed by <a href="https://santiagdc.framer.website/"> Santiago Aguirre</a></h2>
+
       </div>
     </>
   );
